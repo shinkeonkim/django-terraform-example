@@ -22,3 +22,11 @@ variable "availability_zones" {
   default     = ["ap-northeast-2a", "ap-northeast-2b"]
 }
 
+
+# load balancer
+
+variable "health_check_path" {
+  description = "Health check path for the default target group"
+  default     = "/ping/"
+}
+
