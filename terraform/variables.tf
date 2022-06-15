@@ -43,3 +43,32 @@ variable "ssh_pubkey_file" {
   default     = "~/.ssh/id_rsa.pub"
 }
 
+
+# ecs
+
+variable "ecs_cluster_name" {
+  description = "Name of the ECS cluster"
+  default     = "production"
+}
+
+variable "amis" {
+  description = "Which AMI to spawn."
+  default = {
+    ap-northeast-2 = "ami-01669b936a269ef2d"
+  }
+}
+
+variable "instance_type" {
+  default = "t2.micro"
+}
+
+variable "docker_image_url_django" {
+  description = "Docker image to run in the ECS cluster"
+  default     = "741892569245.dkr.ecr.ap-northeast-2.amazonaws.com/django-terraform:latest"
+}
+
+variable "app_count" {
+  description = "Number of Docker containers to run"
+  default     = 2
+}
+
