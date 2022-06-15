@@ -30,3 +30,9 @@ variable "health_check_path" {
   default     = "/ping/"
 }
 
+# log 
+
+variable "log_retention_in_days" {
+  default = 30
+}
+
